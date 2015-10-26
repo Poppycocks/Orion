@@ -1,0 +1,14 @@
+item.orion.firesticks.name=Fire Sticks
+item.orion.flintandsteel.name=Flint and Steel
+item.orion.firebox.name=Firebox
+item.orion.firebox.tooltip.line1=Too hot to not handle
+item.orion.matches.name=Matches
+item.orion.glowcrystal.name=Glowing Crystal
+
+tile.orion.torchlit.name=Lit Torch
+tile.orion.torchsmoldering.name=Smoldering Torch
+tile.orion.torchunlit.name=Unlit Torch
+tile.orion.glowtorch.name=Glowtorch
+tile.orion.glowcomposite.name=Glowing Composite Sand
+tile.orion.mininglevelauto.name=Automated Mining Only
+tile.orion.mininglevelend.name=End Tier

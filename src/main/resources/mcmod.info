@@ -1,0 +1,16 @@
+[
+{
+  "modid": "orion",
+  "name": "Orion core",
+  "description": "Adds things necessary for the pack",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Poppycocks"],
+  "credits": "All hail Cthulhu.",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
