@@ -1,0 +1,6 @@
+/.gradle/**
+/build/**
+/eclipse/**
+/out/**
+/projectFilesBackup/**
+*.txt
