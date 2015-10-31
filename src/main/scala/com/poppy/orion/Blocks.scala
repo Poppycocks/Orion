@@ -9,9 +9,9 @@ import net.minecraftforge.oredict.OreDictionary
 
 object Blocks {
 
-  val blockTorchLit = new BlockTorchLit
-  val blockTorchSmoldering = new BlockTorchSmoldering
-  val blockTorchUnlit = new BlockTorchUnlit
+  val blockTorchLit = new BlockTorchR("torchlit", 0)
+  val blockTorchSmoldering = new BlockTorchR("torchsmoldering", 1)
+  val blockTorchUnlit = new BlockTorchR("torchunlit", 2)
   val blockGlowComposite = new BlockGlowComposite
   val blockGlowTorch = new BlockTorch {setStepSound(Block.soundTypeWood) setBlockName("orion.glowtorch") setBlockTextureName("orion:glowtorchlit"); override def randomDisplayTick(w: World, x: Int, y: Int, z: Int, r: java.util.Random) = null}
   //val blockGlowTorchLit = new BlockGlowTorch(true){setStepSound(Block.soundTypeWood) setBlockName("orion.glowtorchlit") setBlockTextureName("orion:glowtorchlit")}
