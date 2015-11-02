@@ -12,7 +12,6 @@ import net.minecraft.item.{Item, ItemStack}
 import net.minecraft.world.World
 
 class BlockTorchR(name: String, xvariant: Byte) extends BlockTorch {
-  val variant = List(Blocks.blockTorchLit, Blocks.blockTorchSmoldering, Blocks.blockTorchUnlit)
   val xrand = new Random
 
   setBlockName(s"orion.$name")
@@ -37,7 +36,7 @@ class BlockTorchR(name: String, xvariant: Byte) extends BlockTorch {
   override def updateTick(world: World, x: Int, y: Int, z:Int, rand: Random): Unit ={
     if (xvariant != 2) {
       val meta = world.getBlockMetadata(x, y, z)
-      world.setBlock(x, y, z, variant(xvariant + 1), meta, 2)
+      world.setBlock(x, y, z, Blocks.torchVariants(xvariant + 1), meta, 2)
       world.playSoundEffect(x, y, z, "random.fizz", 1.0F, rand.nextFloat() * 0.1F + 0.9F)
     }
   }
@@ -47,14 +46,14 @@ class BlockTorchR(name: String, xvariant: Byte) extends BlockTorch {
     val meta = world.getBlockMetadata(x,y,z)
     if (stack != null && (OreDictionaryHelper.getOreNames(stack) contains("itemIgniter"))) {
       if (!stack.isItemStackDamageable && stack.getMaxStackSize>1) stack.stackSize-=1 else stack.damageItem(1, player)
-      world.setBlock(x, y, z, variant.head, meta, 2)
+      world.setBlock(x, y, z, Blocks.torchVariants.head, meta, 2)
       world.playSoundEffect(x, y, z, "random.fizz", 1.0F, world.rand.nextFloat() * 0.1F + 0.9F)
     }
     true
   }
 
   override def getItemDropped(x$1: Int, x$2: java.util.Random, x$3: Int): Item = {
-    Item.getItemFromBlock(variant(2))
+    Item.getItemFromBlock(Blocks.torchVariants(2))
   }
 
   @SideOnly(Side.CLIENT)
