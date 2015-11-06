@@ -15,7 +15,7 @@ import scala.collection.JavaConverters._
 import scala.collection.mutable.{ListBuffer, ArrayBuffer}
 import scala.util.Random
 
-class BlockHardOre(name: String, miningLevel: Int) extends SBlock(Material.rock){
+class BlockHardOre(name: String, miningLevel: Int, defaultLevel: Int) extends SBlock(Material.rock){
   setBlockName(s"orion.${name}ore")
   setHardness(2.0F)
   setResistance(6.0F)
@@ -26,7 +26,6 @@ class BlockHardOre(name: String, miningLevel: Int) extends SBlock(Material.rock)
   val rand = new Random()
   var icons: List[IIcon] = List()
   var drops: List[(Item, Int)] = List()
-  var defaultLevel: Int = 7
   var dropBase: Int = 1
   var fortuneBase: Int = 1
   var fortuneVariance: Int = 1
@@ -34,10 +33,10 @@ class BlockHardOre(name: String, miningLevel: Int) extends SBlock(Material.rock)
   override def canDropFromExplosion(explosion: Explosion) = false
   override def registerBlockIcons(reg: IIconRegister): Unit = icons = List.tabulate(12)(n => reg.registerIcon(s"orion:${name}ore$n"))
   override def damageDropped(meta: Int) = meta
-  override def getIcon(side: Int, meta: Int): IIcon = icons(meta)
+  override def getIcon(side: Int, meta: Int): IIcon = icons(if (meta <= 11) meta else 11)
 
   override def getSubBlocks(item: Item , tab: CreativeTabs): java.util.List[ItemStack] = {
-    val l: List[ItemStack] = List.tabulate(12)(n => new ItemStack(item, 1, n))
+    val l: List[ItemStack] = List (new ItemStack(item, 1, defaultLevel))
     l.asJava
   }
 

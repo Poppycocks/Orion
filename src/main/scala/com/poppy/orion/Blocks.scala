@@ -24,54 +24,54 @@ object Blocks {
   val blockEndGame = new Block(Material.dragonEgg) {setStepSound(Block.soundTypeStone) setBlockName("orion.mininglevelend") setBlockTextureName("minecraft:bedrock")}
 
   //Overworld hard ore blocks
-  val blocksIronOre = new BlockHardOre("iron",1) {drops = List( (Items.itemIronChunk, 0), (Items.itemNickelChunk, 20), (Items.itemUncutPeridot, 3) )}
-  val blocksNickelOre = new BlockHardOre("nickel",1) {drops = List( (Items.itemNickelChunk, 0), (Items.itemIronChunk, 20))}
-  val blocksGoldOre = new BlockHardOre("gold",1) {drops = List((Items.itemGoldChunk, 0), (Items.itemCopperChunk, 20))}
-  val blocksCopperOre = new BlockHardOre("copper",1) {drops = List((Items.itemCopperChunk, 0), (Items.itemGoldChunk, 20))}
-  val blocksTinOre = new BlockHardOre("tin",1) {drops = List((Items.itemTinChunk, 0))}
-  val blocksSilverOre = new BlockHardOre("silver",1) {drops = List((Items.itemSilverChunk, 0), (Items.itemLeadChunk, 40))}
-  val blocksLeadOre = new BlockHardOre("lead",1) {drops = List((Items.itemLeadChunk, 0), (Items.itemSilverChunk, 40))}
-  val blocksAluminumOre = new BlockHardOre("aluminum",1) {drops = List((Items.itemAluminumChunk, 0),(Items.itemIronChunk, 10), (Items.itemUncutRuby, 3), (Items.itemUncutSapphire, 3))}
+  val blocksIronOre = new BlockHardOre("iron", 1, 6) {drops = List( (Items.itemIronChunk, 0), (Items.itemNickelChunk, 20), (Items.itemUncutPeridot, 3) )}
+  val blocksNickelOre = new BlockHardOre("nickel", 1, 6) {drops = List( (Items.itemNickelChunk, 0), (Items.itemIronChunk, 20))}
+  val blocksGoldOre = new BlockHardOre("gold", 1, 6) {drops = List((Items.itemGoldChunk, 0), (Items.itemCopperChunk, 20))}
+  val blocksCopperOre = new BlockHardOre("copper", 1, 6) {drops = List((Items.itemCopperChunk, 0), (Items.itemGoldChunk, 20))}
+  val blocksTinOre = new BlockHardOre("tin", 1, 6) {drops = List((Items.itemTinChunk, 0))}
+  val blocksSilverOre = new BlockHardOre("silver", 1, 6) {drops = List((Items.itemSilverChunk, 0), (Items.itemLeadChunk, 40))}
+  val blocksLeadOre = new BlockHardOre("lead", 1, 6) {drops = List((Items.itemLeadChunk, 0), (Items.itemSilverChunk, 40))}
+  val blocksAluminumOre = new BlockHardOre("aluminum", 1, 6) {drops = List((Items.itemAluminumChunk, 0),(Items.itemIronChunk, 10), (Items.itemUncutRuby, 3), (Items.itemUncutSapphire, 3))}
 
-  val blocksRedstoneOre = new BlockHardOre("redstone",1) {drops = List((Items.itemRedStone, 0))}
-  val blocksLapisOre = new BlockHardOre("lapis",1) {drops = List((Items.itemLapisChunk, 0))}
-  val blocksElectrotineOre = new BlockHardOre("electrotine",1) {drops = List((Items.itemElectrotineChunk, 0))}
-  val blocksDiamondOre = new BlockHardOre("diamond",1) {drops = List((Items.itemUncutDiamond, 0))}
-  val blocksEmeraldOre = new BlockHardOre("emerald",1) {drops = List((Items.itemUncutEmerald, 0))}
+  val blocksRedstoneOre = new BlockHardOre("redstone", 1, 6) {drops = List((Items.itemRedStone, 0))}
+  val blocksLapisOre = new BlockHardOre("lapis", 1, 6) {drops = List((Items.itemLapisChunk, 0))}
+  val blocksElectrotineOre = new BlockHardOre("electrotine", 1, 6) {drops = List((Items.itemElectrotineChunk, 0))}
+  val blocksDiamondOre = new BlockHardOre("diamond", 1, 6) {drops = List((Items.itemUncutDiamond, 0))}
+  val blocksEmeraldOre = new BlockHardOre("emerald", 1, 6) {drops = List((Items.itemUncutEmerald, 0))}
   //Nether hard ore blocks
-  val blocksNetherIronOre = new BlockHardOre("netheriron",1) {drops = List( (Items.itemIronChunk, 0), (Items.itemNickelChunk, 20), (Items.itemUncutPeridot, 4) )}
-  val blocksNetherNickelOre = new BlockHardOre("nethernickel",1) {drops = List( (Items.itemNickelChunk, 0), (Items.itemIronChunk, 20))}
-  val blocksNetherGoldOre = new BlockHardOre("nethergold",1) {drops = List((Items.itemGoldChunk, 0), (Items.itemCopperChunk, 20))}
-  val blocksNetherCopperOre = new BlockHardOre("nethercopper",1) {drops = List((Items.itemCopperChunk, 0), (Items.itemGoldChunk, 20))}
-  val blocksNetherTinOre = new BlockHardOre("nethertin",1) {drops = List((Items.itemTinChunk, 0))}
-  val blocksNetherSilverOre = new BlockHardOre("nethersilver",1) {drops = List((Items.itemSilverChunk, 0), (Items.itemLeadChunk, 40))}
-  val blocksNetherLeadOre = new BlockHardOre("netherlead",1) {drops = List((Items.itemLeadChunk, 0), (Items.itemSilverChunk, 40))}
-  val blocksNetherAluminumOre = new BlockHardOre("netheraluminum",1) {drops = List((Items.itemAluminumChunk, 0),(Items.itemIronChunk, 10), (Items.itemUncutRuby, 4), (Items.itemUncutSapphire, 4))}
-  val blocksNetherOsmiumOre = new BlockHardOre("netherosmium", 1) {drops = List ((Items.itemOsmiumChunk, 0))}
+  val blocksNetherIronOre = new BlockHardOre("netheriron", 1, 8) {drops = List( (Items.itemIronChunk, 0), (Items.itemNickelChunk, 20), (Items.itemUncutPeridot, 4) )}
+  val blocksNetherNickelOre = new BlockHardOre("nethernickel", 1, 8) {drops = List( (Items.itemNickelChunk, 0), (Items.itemIronChunk, 20))}
+  val blocksNetherGoldOre = new BlockHardOre("nethergold", 1, 8) {drops = List((Items.itemGoldChunk, 0), (Items.itemCopperChunk, 20))}
+  val blocksNetherCopperOre = new BlockHardOre("nethercopper", 1, 8) {drops = List((Items.itemCopperChunk, 0), (Items.itemGoldChunk, 20))}
+  val blocksNetherTinOre = new BlockHardOre("nethertin", 1, 8) {drops = List((Items.itemTinChunk, 0))}
+  val blocksNetherSilverOre = new BlockHardOre("nethersilver", 1, 8) {drops = List((Items.itemSilverChunk, 0), (Items.itemLeadChunk, 40))}
+  val blocksNetherLeadOre = new BlockHardOre("netherlead", 1, 8) {drops = List((Items.itemLeadChunk, 0), (Items.itemSilverChunk, 40))}
+  val blocksNetherAluminumOre = new BlockHardOre("netheraluminum", 1, 8) {drops = List((Items.itemAluminumChunk, 0),(Items.itemIronChunk, 10), (Items.itemUncutRuby, 4), (Items.itemUncutSapphire, 4))}
+  val blocksNetherOsmiumOre = new BlockHardOre("netherosmium", 1, 8) {drops = List ((Items.itemOsmiumChunk, 0))}
 
-  val blocksNetherRedstoneOre = new BlockHardOre("netherredstone",1) {drops = List((Items.itemRedStone, 0))}
-  val blocksNetherLapisOre = new BlockHardOre("netherlapis",1) {drops = List((Items.itemLapisChunk, 0))}
-  val blocksNetherElectrotineOre = new BlockHardOre("netherelectrotine",1) {drops = List((Items.itemElectrotineChunk, 0))}
-  val blocksNetherDiamondOre = new BlockHardOre("netherdiamond",1) {drops = List((Items.itemUncutDiamond, 0))}
-  val blocksNetherQuartzOre = new BlockHardOre("netherquartz", 1) {drops = List((Items.itemUncutNetherQuartz, 0))}
+  val blocksNetherRedstoneOre = new BlockHardOre("netherredstone", 1, 8) {drops = List((Items.itemRedStone, 0))}
+  val blocksNetherLapisOre = new BlockHardOre("netherlapis", 1, 8) {drops = List((Items.itemLapisChunk, 0))}
+  val blocksNetherElectrotineOre = new BlockHardOre("netherelectrotine", 1, 8) {drops = List((Items.itemElectrotineChunk, 0))}
+  val blocksNetherDiamondOre = new BlockHardOre("netherdiamond", 1, 8) {drops = List((Items.itemUncutDiamond, 0))}
+  val blocksNetherQuartzOre = new BlockHardOre("netherquartz", 1, 8) {drops = List((Items.itemUncutNetherQuartz, 0))}
   //DD hard ore blocks
-  val blocksDDIronOre = new BlockHardOre("ddiron",1) {drops = List( (Items.itemIronChunk, 0), (Items.itemNickelChunk, 20), (Items.itemUncutPeridot, 5) )}
-  val blocksDDNickelOre = new BlockHardOre("ddnickel",1) {drops = List( (Items.itemNickelChunk, 0), (Items.itemIronChunk, 20))}
-  val blocksDDGoldOre = new BlockHardOre("ddgold",1) {drops = List((Items.itemGoldChunk, 0), (Items.itemCopperChunk, 20))}
-  val blocksDDCopperOre = new BlockHardOre("ddcopper",1) {drops = List((Items.itemCopperChunk, 0), (Items.itemGoldChunk, 20))}
-  val blocksDDTinOre = new BlockHardOre("ddtin",1) {drops = List((Items.itemTinChunk, 0))}
-  val blocksDDSilverOre = new BlockHardOre("ddsilver",1) {drops = List((Items.itemSilverChunk, 0), (Items.itemLeadChunk, 40))}
-  val blocksDDLeadOre = new BlockHardOre("ddlead",1) {drops = List((Items.itemLeadChunk, 0), (Items.itemSilverChunk, 40))}
-  val blocksDDAluminumOre = new BlockHardOre("ddaluminum",1) {drops = List((Items.itemAluminumChunk, 0),(Items.itemIronChunk, 10), (Items.itemUncutRuby, 5), (Items.itemUncutSapphire, 5))}
-  val blocksDDOsmiumOre = new BlockHardOre("ddosmium", 1) {drops = List((Items.itemOsmiumChunk, 0))}
+  val blocksDDIronOre = new BlockHardOre("ddiron", 1, 11) {drops = List( (Items.itemIronChunk, 0), (Items.itemNickelChunk, 20), (Items.itemUncutPeridot, 5) )}
+  val blocksDDNickelOre = new BlockHardOre("ddnickel", 1, 11) {drops = List( (Items.itemNickelChunk, 0), (Items.itemIronChunk, 20))}
+  val blocksDDGoldOre = new BlockHardOre("ddgold", 1, 11) {drops = List((Items.itemGoldChunk, 0), (Items.itemCopperChunk, 20))}
+  val blocksDDCopperOre = new BlockHardOre("ddcopper", 1, 11) {drops = List((Items.itemCopperChunk, 0), (Items.itemGoldChunk, 20))}
+  val blocksDDTinOre = new BlockHardOre("ddtin", 1, 11) {drops = List((Items.itemTinChunk, 0))}
+  val blocksDDSilverOre = new BlockHardOre("ddsilver", 1, 11) {drops = List((Items.itemSilverChunk, 0), (Items.itemLeadChunk, 40))}
+  val blocksDDLeadOre = new BlockHardOre("ddlead", 1, 11) {drops = List((Items.itemLeadChunk, 0), (Items.itemSilverChunk, 40))}
+  val blocksDDAluminumOre = new BlockHardOre("ddaluminum", 1, 11) {drops = List((Items.itemAluminumChunk, 0),(Items.itemIronChunk, 10), (Items.itemUncutRuby, 5), (Items.itemUncutSapphire, 5))}
+  val blocksDDOsmiumOre = new BlockHardOre("ddosmium", 1, 11) {drops = List((Items.itemOsmiumChunk, 0))}
 
-  val blocksDDRedstoneOre = new BlockHardOre("ddredstone",1) {drops = List((Items.itemRedStone, 0))}
-  val blocksDDLapisOre = new BlockHardOre("ddlapis",1) {drops = List((Items.itemLapisChunk, 0))}
-  val blocksDDElectrotineOre = new BlockHardOre("ddelectrotine",1) {drops = List((Items.itemElectrotineChunk, 0))}
-  val blocksDDDiamondOre = new BlockHardOre("dddiamond",1) {drops = List((Items.itemUncutDiamond, 0))}
-  val blocksDDEmeraldOre = new BlockHardOre("ddemerald",1) {drops = List((Items.itemUncutEmerald, 0))}
-  val blocksDDCertusQuartzOre = new BlockHardOre("ddcertusquartz", 1) {drops = List((Items.itemUncutCertusQuartz, 0))}
-  val blocksDDChargedCertusQuartzOre = new BlockHardOre("ddchargedcertusquartz", 1) {drops = List((Items.itemUncutChargedCertusQuartz, 0))}
+  val blocksDDRedstoneOre = new BlockHardOre("ddredstone", 1, 11) {drops = List((Items.itemRedStone, 0))}
+  val blocksDDLapisOre = new BlockHardOre("ddlapis", 1, 11) {drops = List((Items.itemLapisChunk, 0))}
+  val blocksDDElectrotineOre = new BlockHardOre("ddelectrotine", 1, 11) {drops = List((Items.itemElectrotineChunk, 0))}
+  val blocksDDDiamondOre = new BlockHardOre("dddiamond", 1, 11) {drops = List((Items.itemUncutDiamond, 0))}
+  val blocksDDEmeraldOre = new BlockHardOre("ddemerald", 1, 11) {drops = List((Items.itemUncutEmerald, 0))}
+  val blocksDDCertusQuartzOre = new BlockHardOre("ddcertusquartz", 1, 11) {drops = List((Items.itemUncutCertusQuartz, 0))}
+  val blocksDDChargedCertusQuartzOre = new BlockHardOre("ddchargedcertusquartz", 1, 11) {drops = List((Items.itemUncutChargedCertusQuartz, 0))}
 
   def init(){
     GameRegistry.registerBlock(blockTorchLit, "torchlit")
