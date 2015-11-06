@@ -5,6 +5,29 @@ item.orion.firebox.tooltip.line1=Too hot to not handle
 item.orion.matches.name=Matches
 item.orion.glowcrystal.name=Glowing Crystal
 
+item.orion.ironchunk.name=Iron Chunk
+item.orion.nickelchunk.name=Nickel Chunk
+item.orion.goldchunk.name=Gold Chunk
+item.orion.copperchunk.name=Copper Chunk
+item.orion.tinchunk.name=Tin Chunk
+item.orion.silverchunk.name=Silver Chunk
+item.orion.leadchunk.name=Lead Chunk
+item.orion.aluminumchunk.name=Aluminum Chunk
+item.orion.osmiumchunk.name=Osmium Chunk
+
+item.orion.sapphireuncut.name=Uncut Sapphire
+item.orion.peridotuncut.name=Uncut Peridot
+item.orion.rubyuncut.name=Uncut Ruby
+item.orion.diamonduncut.name=Uncut Diamond
+item.orion.emeralduncut.name=Uncut Emerald
+item.orion.neterquartzuncut.name=Uncut Nether Quartz
+item.orion.certusquartzuncut.name=Uncut Certus Quartz
+item.orion.chargedcertusquartzuncut.name=Uncut Charged Certus Quartz
+
+item.redstonechunk.name=Red Stone
+item.lapischunk.name=Lapis Chunk
+item.electrotinechunk.name=Chunk Electrotine
+
 tile.orion.torchlit.name=Lit Torch
 tile.orion.torchsmoldering.name=Smoldering Torch
 tile.orion.torchunlit.name=Unlit Torch
@@ -12,3 +35,53 @@ tile.orion.glowtorch.name=Glowtorch
 tile.orion.glowcomposite.name=Glowing Composite Sand
 tile.orion.mininglevelauto.name=Automated Mining Only
 tile.orion.mininglevelend.name=End Tier
+
+tile.orion.ironore.name=Iron Ore
+tile.orion.nickelore.name=Nickel Ore
+tile.orion.goldore.name=Gold Ore
+tile.orion.copperore.name=Copper Ore
+tile.orion.tinore.name=Tin Ore
+tile.orion.silverore.name=Silver Ore
+tile.orion.leadore.name=Lead Ore
+tile.orion.aluminumore.name=Aluminum Ore
+
+tile.orion.redstoneore.name=Redstone Ore
+tile.orion.lapisore.name=Lapis Ore
+tile.orion.electrotineore.name=Electrotine Ore
+tile.orion.diamondore.name=Diamond Ore
+tile.orion.emerladore.name=Emerald Ore
+
+tile.orion.ironnetherore.name=Nether Iron Ore
+tile.orion.nickelnetherore.name=Nether Nickel Ore
+tile.orion.goldnetherore.name=Nether Gold Ore
+tile.orion.coppernetherore.name=Nether Copper Ore
+tile.orion.tinnetherore.name=Nether Tin Ore
+tile.orion.silvernetherore.name=Nether Silver Ore
+tile.orion.leadnetherore.name=Nether Lead Ore
+tile.orion.aluminumnetherore.name=Nether Aluminum Ore
+tile.orion.osmiumnetherore.name=Nether Osmium Ore
+
+tile.orion.redstonenetherore.name=Nether Redstone Ore
+tile.orion.lapisnetherore.name=Nether Lapis Ore
+tile.orion.electrotinenetherore.name=Nether Electrotine Ore
+tile.orion.diamondnetherore.name=Nether Diamond Ore
+tile.orion.emerladnetherore.name=Nether Emerald Ore
+tile.orion.netherquartzore.name=Nether Quartz Ore
+
+tile.orion.ironddore.name=Deep Iron Ore
+tile.orion.nickelddore.name=Deep Nickel Ore
+tile.orion.goldddore.name=Deep Gold Ore
+tile.orion.copperddore.name=Deep Copper Ore
+tile.orion.tinddore.name=Deep Tin Ore
+tile.orion.silverddore.name=Deep Silver Ore
+tile.orion.leadddore.name=Deep Lead Ore
+tile.orion.aluminumddore.name=Deep Aluminum Ore
+tile.orion.osmiumddore.name=Deep Osmium Ore
+
+tile.orion.redstoneddore.name=Deep Redstone Ore
+tile.orion.lapisddore.name=Deep Lapis Ore
+tile.orion.electrotineddore.name=Deep Electrotine Ore
+tile.orion.diamondddore.name=Deep Diamond Ore
+tile.orion.emerladddore.name=Deep Emerald Ore
+tile.orion.certusquartzddore.name=Deep Certus Quartz Ore
+tile.orion.chargedcertusquartzddore.name=Deep Charged Certus Quartz Ore
