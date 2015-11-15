@@ -47,13 +47,13 @@ class BlockHardOre(name: String, miningLevel: Int, defaultLevel: Int) extends SB
   override def getDrops(world: World, x: Int, y: Int, z: Int, metadata: Int, fortune: Int): util.ArrayList[ItemStack] = {
     var actualDropsList: ArrayBuffer[ItemStack] = ArrayBuffer[ItemStack]()
     var dropsLeft: Int = if (fortune == 0) dropBase else dropBase + (fortune - 1)*fortuneBase + (if (fortuneVariance>0)rand.nextInt(fortuneVariance) else 0)
-    if (drops != null && (1 to 75).contains(rand.nextInt(100))) {
+    if (drops != null && 75 <= rand.nextInt(100)) {
       actualDropsList += new ItemStack(drops(0)._1, 1)
       dropsLeft -= 1
     }
 
     if (drops != null && drops.length > 1) for (drop <- drops.tail){
-        if (dropsLeft>0 && (1 to drop._2).contains(rand.nextInt(100))) {actualDropsList += new ItemStack(drop._1, 1); dropsLeft-=1}
+        if (dropsLeft>0 && drop._2 <= rand.nextInt(100)) {actualDropsList += new ItemStack(drop._1, 1); dropsLeft-=1}
     }
     if (drops != null && dropsLeft>0) actualDropsList += new ItemStack(drops.head._1, dropsLeft)
     new util.ArrayList[ItemStack](actualDropsList.asJava)
