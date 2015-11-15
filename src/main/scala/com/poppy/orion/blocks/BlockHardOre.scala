@@ -6,14 +6,18 @@ import net.minecraft.block.Block
 import net.minecraft.block.material.Material
 import net.minecraft.client.renderer.texture.IIconRegister
 import net.minecraft.creativetab.CreativeTabs
+import net.minecraft.enchantment.EnchantmentHelper
 import net.minecraft.entity.player.EntityPlayer
 import net.minecraft.item.{Item, ItemStack}
+import net.minecraft.stats.StatList
 import net.minecraft.util.IIcon
 import net.minecraft.world.{Explosion, World}
+import net.minecraftforge.event.ForgeEventFactory
 
 import scala.collection.JavaConverters._
-import scala.collection.mutable.{ListBuffer, ArrayBuffer}
+import scala.collection.mutable.{ArrayBuffer, ListBuffer}
 import scala.util.Random
+import scala.collection.JavaConversions._
 
 class BlockHardOre(name: String, miningLevel: Int, defaultLevel: Int) extends SBlock(Material.rock){
   setBlockName(s"orion.${name}ore")
@@ -42,17 +46,42 @@ class BlockHardOre(name: String, miningLevel: Int, defaultLevel: Int) extends SB
 
   override def getDrops(world: World, x: Int, y: Int, z: Int, metadata: Int, fortune: Int): util.ArrayList[ItemStack] = {
     var actualDropsList: ArrayBuffer[ItemStack] = ArrayBuffer[ItemStack]()
-    var dropsLeft: Int = if (fortune <= 0) dropBase else dropBase + (fortune - 1)*fortuneBase + rand.nextInt(fortuneVariance)
+    var dropsLeft: Int = if (fortune == 0) dropBase else dropBase + (fortune - 1)*fortuneBase + (if (fortuneVariance>0)rand.nextInt(fortuneVariance) else 0)
+    if (drops != null && (1 to 75).contains(rand.nextInt(100))) {
+      actualDropsList += new ItemStack(drops(0)._1, 1)
+      dropsLeft -= 1
+    }
+
     if (drops != null && drops.length > 1) for (drop <- drops.tail){
-        if (dropsLeft>0 && rand.nextInt((100 / drop._2)-1)==0) {actualDropsList += new ItemStack(drop._1, 1); dropsLeft-=1}
+        if (dropsLeft>0 && (1 to drop._2).contains(rand.nextInt(100))) {actualDropsList += new ItemStack(drop._1, 1); dropsLeft-=1}
     }
     if (drops != null && dropsLeft>0) actualDropsList += new ItemStack(drops.head._1, dropsLeft)
     new util.ArrayList[ItemStack](actualDropsList.asJava)
   }
 
-  override def onBlockHarvested(world: World, x: Int, y: Int, z: Int, meta: Int, player: EntityPlayer): Unit ={
-    if (meta>0) world.setBlock(x,y,z,this,meta-1,2)
+  override def harvestBlock (world : World, player : EntityPlayer, x : Int, y : Int, z : Int, meta : Int) {
+    player.addStat(StatList.mineBlockStatArray(Block.getIdFromBlock(this)), 1)
+    player.addExhaustion(0.025F)
+    if (this.canSilkHarvest(world, player, x, y, z, meta) && EnchantmentHelper.getSilkTouchModifier(player)) {
+      val items : util.ArrayList[ItemStack] = new util.ArrayList[ItemStack]
+      val itemstack : ItemStack = this.createStackedBlock(meta)
+      if (itemstack != null) {
+        items.add(itemstack)
+      }
+      ForgeEventFactory.fireBlockHarvesting(items, world, this, x, y, z, meta, 0, 1.0f, true, player)
+      for (is <- items) {
+        this.dropBlockAsItem(world, x, y, z, is)
+      }
+    }
+    else {
+      harvesters.set(player)
+      val i1 : Int = EnchantmentHelper.getFortuneModifier(player)
+      this.dropBlockAsItem(world, x, y, z, meta, i1)
+      if (meta>0) world.setBlock(x,y,z,this,meta-1,2)
+      harvesters.set(null)
+    }
   }
+
 
   override def onBlockDestroyedByExplosion (world : World, x: Int, y: Int, z: Int, explosion : Explosion): Unit = {
     val meta = world.getBlockMetadata(x,y,z)

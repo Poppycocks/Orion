@@ -1,16 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module external.linked.project.id="Orion" external.linked.project.path="$MODULE_DIR$" external.root.project.path="$MODULE_DIR$" external.system.id="GRADLE" external.system.module.group="com.poppy.orion" external.system.module.version="1.0" relativePaths="true" type="JAVA_MODULE" version="4">
-  <component name="FacetManager">
-    <facet type="scala" name="Scala">
-      <configuration>
-        <option name="compilerLibraryLevel" value="Project" />
-        <option name="compilerLibraryName" value="scala-compiler-2.11.1" />
-      </configuration>
-    </facet>
-  </component>
   <component name="NewModuleRootManager" inherit-compiler-output="true">
-    <output url="file://$MODULE_DIR$/build" />
-    <output-test url="file://$MODULE_DIR$/build" />
     <exclude-output />
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/src/api/java" isTestSource="false" />
@@ -27,6 +17,16 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library" exported="" scope="RUNTIME">
+      <library name="Gradle: C__Users_ubko__gradle_wrapper_dists_gradle_2_0_all_7rd4e4rcg4riqi0j6j508m2lbk_gradle_2_0_caches_minecraft_net_minecraftforge_forge_1_7_10_10_13_4_1492_1_7_10_start:10\start">
+        <CLASSES>
+          <root url="file://$USER_HOME$/.gradle/wrapper/dists/gradle-2.0-all/7rd4e4rcg4riqi0j6j508m2lbk/gradle-2.0/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.4.1492-1.7.10/start" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="library" exported="" name="Gradle: com.enderio.core:EnderCore:1.7.10-0.1.0.26_beta:dev" level="project" />
     <orderEntry type="library" exported="" name="Gradle: codechicken:CodeChickenCore:1.7.10-1.0.7.47:dev" level="project" />
     <orderEntry type="library" exported="" name="Gradle: codechicken:CodeChickenLib:1.7.10-1.1.3.140:dev" level="project" />
     <orderEntry type="library" exported="" name="Gradle: :forgeSrc:1.7.10-10.13.4.1492-1.7.10" level="project" />
@@ -89,15 +89,23 @@
     <orderEntry type="library" exported="" name="Gradle: org.lwjgl.lwjgl:lwjgl-platform:2.9.1:natives-windows" level="project" />
     <orderEntry type="library" exported="" name="Gradle: org.lwjgl.lwjgl:lwjgl-platform:2.9.1:natives-linux" level="project" />
     <orderEntry type="library" exported="" name="Gradle: org.lwjgl.lwjgl:lwjgl-platform:2.9.1:natives-osx" level="project" />
-    <orderEntry type="module-library" exported="" scope="RUNTIME">
-      <library name="Gradle: C__Users_ubko__gradle_wrapper_dists_gradle_2_0_all_7rd4e4rcg4riqi0j6j508m2lbk_gradle_2_0_caches_minecraft_net_minecraftforge_forge_1_7_10_10_13_4_1492_1_7_10_start">
+    <orderEntry type="module-library" exported="">
+      <library>
         <CLASSES>
-          <root url="file://$USER_HOME$/.gradle/wrapper/dists/gradle-2.0-all/7rd4e4rcg4riqi0j6j508m2lbk/gradle-2.0/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.4.1492-1.7.10/start" />
+          <root url="jar://$USER_HOME$/Desktop/CoFHLib-[1.7.10]1.0.3-175.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="library" exported="" name="Gradle: com.enderio.core:EnderCore:1.7.10-0.1.0.26_beta:dev" level="project" />
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$USER_HOME$/Desktop/ImmersiveEngineering-0.6.1.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>

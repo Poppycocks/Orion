@@ -1,6 +1,6 @@
 package com.poppy.orion.proxy
 
-import com.poppy.orion.{Items, TileEntities, Orion, Blocks}
+import com.poppy.orion.{OItems, TileEntities, Orion, OBlocks}
 import cpw.mods.fml.common.event.FMLPreInitializationEvent
 
 /**
@@ -9,9 +9,9 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent
 class CommonProxy {
   def preInit(e: FMLPreInitializationEvent): Unit = {
     Orion.logger.info("Initialising Items")
-    Items.init()
+    OItems.init()
     Orion.logger.info("Initialising Blocks")
-    Blocks.init()
+    OBlocks.init()
     Orion.logger.info("Registering TileEntities")
     TileEntities.init()
   }

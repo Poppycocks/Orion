@@ -18,18 +18,18 @@ object Orion{
   def preInit(e: FMLPreInitializationEvent) {
     Config.init(e.getSuggestedConfigurationFile())
 
-    logger. info("OMG I'm in the preInit phase! Hooray!")
+    //logger. info("OMG I'm in the preInit phase! Hooray!")
     proxy.preInit(e)
   }
 
   @Mod.EventHandler
   def init(e: FMLInitializationEvent) {
-    logger.info("OMG I'm in the init phase! Huzzah!")
+    //logger.info("OMG I'm in the init phase! Huzzah!")
   }
 
   @Mod.EventHandler
   def postInit(e: FMLPostInitializationEvent) {
-    logger.info("OMG I'm in the postInit phase! Praise Cthulhu!")
+    //logger.info("OMG I'm in the postInit phase! Praise Cthulhu!")
   }
 
 }

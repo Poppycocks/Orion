@@ -3,7 +3,7 @@ package com.poppy.orion.blocks
 import java.util.Random
 
 import com.enderio.core.common.util.OreDictionaryHelper
-import com.poppy.orion.{Blocks, Config}
+import com.poppy.orion.{OBlocks, Config}
 import cpw.mods.fml.relauncher.{Side, SideOnly}
 import net.minecraft.block.BlockTorch
 import net.minecraft.creativetab.CreativeTabs
@@ -36,7 +36,7 @@ class BlockTorchR(name: String, xvariant: Byte) extends BlockTorch {
   override def updateTick(world: World, x: Int, y: Int, z:Int, rand: Random): Unit ={
     if (xvariant != 2) {
       val meta = world.getBlockMetadata(x, y, z)
-      world.setBlock(x, y, z, Blocks.torchVariants(xvariant + 1), meta, 2)
+      world.setBlock(x, y, z, OBlocks.torchVariants(xvariant + 1), meta, 2)
       world.playSoundEffect(x, y, z, "random.fizz", 1.0F, rand.nextFloat() * 0.1F + 0.9F)
     }
   }
@@ -46,14 +46,14 @@ class BlockTorchR(name: String, xvariant: Byte) extends BlockTorch {
     val meta = world.getBlockMetadata(x,y,z)
     if (stack != null && (OreDictionaryHelper.getOreNames(stack) contains("itemIgniter"))) {
       if (!stack.isItemStackDamageable && stack.getMaxStackSize>1) stack.stackSize-=1 else stack.damageItem(1, player)
-      world.setBlock(x, y, z, Blocks.torchVariants.head, meta, 2)
+      world.setBlock(x, y, z, OBlocks.torchVariants.head, meta, 2)
       world.playSoundEffect(x, y, z, "random.fizz", 1.0F, world.rand.nextFloat() * 0.1F + 0.9F)
     }
     true
   }
 
   override def getItemDropped(x$1: Int, x$2: java.util.Random, x$3: Int): Item = {
-    Item.getItemFromBlock(Blocks.torchVariants(2))
+    Item.getItemFromBlock(OBlocks.torchVariants(2))
   }
 
   @SideOnly(Side.CLIENT)
