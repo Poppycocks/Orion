@@ -23,6 +23,7 @@ object OBlocks {
   //val blockGlowTorchUnlit = new BlockGlowTorch(false){setStepSound(Block.soundTypeWood) setBlockName("orion.glowtorchunlit") setBlockTextureName("orion:glowtorchunlit") setCreativeTab(CreativeTabs.tabRedstone) setLightLevel(1.0F)}
   val blockAutoMining = new Block(Material.dragonEgg) {setStepSound(Block.soundTypeStone) setBlockName("orion.mininglevelauto") setBlockTextureName("minecraft:bedrock")}
   val blockEndGame = new Block(Material.dragonEgg) {setStepSound(Block.soundTypeStone) setBlockName("orion.mininglevelend") setBlockTextureName("minecraft:bedrock")}
+  val blockAxle = new BlockAxle
 
   //Overworld hard ore blocks
   val blocksIronOre = new BlockHardOre("iron", 2, 6) {drops = List( (OItems.itemIronChunk, 0), (OItems.itemNickelChunk, 20), (OItems.itemUncutPeridot, 3) )}
@@ -94,6 +95,7 @@ object OBlocks {
     //GameRegistry.registerBlock(blockGlowTorchLit, "glowtorchlit")
     //OreDictionary.registerOre("itemLight", blockGlowTorchLit)
     //GameRegistry.registerBlock(blockGlowTorchUnlit, "glowtorchunlit")
+    GameRegistry.registerBlock(blockAxle, "blockaxle")
 
 
     //Overworld Ores

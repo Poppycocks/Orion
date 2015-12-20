@@ -54,6 +54,7 @@ tile.orion.glowtorch.name=Glowtorch
 tile.orion.glowcomposite.name=Glowing Composite Sand
 tile.orion.mininglevelauto.name=Automated Mining Only
 tile.orion.mininglevelend.name=End Tier
+tile.orion.axle.name=Axle
 
 tile.orion.ironore.name=Iron Ore
 tile.orion.nickelore.name=Nickel Ore

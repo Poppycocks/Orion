@@ -1,5 +1,8 @@
 package com.poppy.orion
 
+import net.minecraft.client.Minecraft
+import net.minecraft.util.ResourceLocation
+
 import scala.util.Random
 
 object Cnst {
@@ -9,6 +12,7 @@ object Cnst {
   final val VERSION = "0.01"
   val rand = new Random()
 
+def bindTexture(textureLocationString: String) = Minecraft.getMinecraft().getTextureManager().bindTexture(new ResourceLocation(textureLocationString))
 
 
 }

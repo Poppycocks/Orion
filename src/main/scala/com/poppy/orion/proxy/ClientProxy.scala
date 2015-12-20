@@ -1,10 +1,10 @@
 package com.poppy.orion.proxy
 
-import com.poppy.orion.proxy.CommonProxy
+import com.poppy.orion.renders.TESRAxle
+import com.poppy.orion.tileents.TEAxle
+import cpw.mods.fml.client.registry.ClientRegistry
 
-/**
- * Created by Ľubko on 11. 10. 2015.
- */
 class ClientProxy extends CommonProxy{
+  ClientRegistry.bindTileEntitySpecialRenderer(classOf[TEAxle], new TESRAxle)
 
 }
